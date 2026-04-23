@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
+import "./App.css"
+
 import Portafolio from "./portafolio/views/Portafolio"
 import AppDetail from "./pages/AppDetail"
 import WebDetail from "./pages/WebDetail"

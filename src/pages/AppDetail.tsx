@@ -25,9 +25,9 @@ function AppDetail() {
 
                 {/* IMÁGENES */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-                    <img src="app1.png" className="rounded-xl object-cover aspect-[9/20] w-full" />
-                    <img src="app2.jpeg" className="rounded-xl object-cover aspect-[9/20] w-full" />
-                    <img src="app3.png" className="rounded-xl object-cover aspect-[9/20] w-full" />
+                    <img src="/app1.png" className="rounded-xl object-cover aspect-[9/20] w-full" />
+                    <img src="/app2.jpeg" className="rounded-xl object-cover aspect-[9/20] w-full" />
+                    <img src="/app3.png" className="rounded-xl object-cover aspect-[9/20] w-full" />
                 </div>
 
                 {/* INFO */}
