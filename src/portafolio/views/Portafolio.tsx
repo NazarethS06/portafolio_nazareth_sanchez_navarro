@@ -1,11 +1,10 @@
 import Navbar from '../components/Navbar'
-import HeroSection from '../components/heroSection'
-import Skill from '../components/skill'
+import HeroSection from '../components/HeroSection'
+import Skill from '../components/Skill'
 import Projects from '../components/Project'
-import Resume from '../components/resume'
-import Footer from '../components/footer'
-
-
+import Resume from '../components/Resume'
+import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 function Portafolio() {
     return (
         <> 
@@ -15,6 +14,7 @@ function Portafolio() {
                 <Skill/>
                 <Projects/>
                 <Resume/>
+                <Contact/>
              </main>
              <Footer/>
  </>
