@@ -3,7 +3,7 @@ import { useLanguage } from "../../context/LanguageContext"
 
 function HeroSection() {
 
-    const { lang, setLang, t } = useLanguage()
+    const { t } = useLanguage()
 
     const scrollTo = (id: string) => {
         document.getElementById(id)?.scrollIntoView({
