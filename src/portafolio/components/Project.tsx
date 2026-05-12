@@ -18,32 +18,6 @@ function Project() {
 
             <div className="space-y-32">
 
-                {/* ZYBUS */}
-                <div className="grid grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 md:col-span-7">
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition"
-                            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
-                        />
-                    </div>
-
-                    <div className="col-span-12 md:col-span-5">
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                            {t.projects.zybus}
-                        </h3>
-
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://github.com/FallasDev/Zybus-Backend"
-                                target="_blank"
-                                className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
-                            >
-                                {t.projects.github}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 {/* APP MOVIL */}
                 <div className="grid grid-cols-12 gap-8 items-center">
                     <div className="col-span-12 md:col-span-5 order-2 md:order-1">
