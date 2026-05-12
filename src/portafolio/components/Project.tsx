@@ -34,7 +34,7 @@ function Project() {
 
                         <div className="flex items-center gap-4">
                             <a
-                                href="https://github.com/NazarethS06/Zybus-Backend"
+                                href="https://github.com/FallasDev/Zybus-Backend"
                                 target="_blank"
                                 className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
                             >
