@@ -15,7 +15,7 @@ function Navbar() {
     }
 
     return (
-        <header className="bg-[#fcf9f8] dark:bg-stone-950 sticky top-0 z-40">
+        <header className="bg-[#fcf9f8]/85 dark:bg-stone-950/85 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-40">
             <nav className="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
 
                 {/* LOGO */}

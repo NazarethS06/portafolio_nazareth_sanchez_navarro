@@ -1,5 +1,6 @@
 import { useLanguage } from "../../context/LanguageContext"
 import { Link } from "react-router-dom"
+import Reveal from "./Reveal"
 
 interface ProjectItem {
     key: "bercorp" | "zybus" | "app" | "web" | "super"
@@ -78,7 +79,8 @@ function Project() {
                     const reversed = index % 2 === 1
 
                     return (
-                        <div key={item.key} className="grid grid-cols-12 gap-8 items-center">
+                        <Reveal key={item.key}>
+                        <div className="grid grid-cols-12 gap-8 items-center">
 
                             <div
                                 className={`col-span-12 md:col-span-7 ${
@@ -86,12 +88,14 @@ function Project() {
                                 }`}
                             >
                                 {item.image ? (
-                                    <img
-                                        className="w-full h-[320px] md:h-[500px] object-cover rounded-xl md:grayscale hover:grayscale-0 transition"
-                                        src={item.image}
-                                        alt={`${t.projects.imgAlt}: ${names[item.key]}`}
-                                        loading="lazy"
-                                    />
+                                    <div className="overflow-hidden rounded-xl shadow-xl ring-1 ring-black/5">
+                                        <img
+                                            className="w-full h-[320px] md:h-[500px] object-cover md:grayscale hover:grayscale-0 hover:scale-105 transition duration-700"
+                                            src={item.image}
+                                            alt={`${t.projects.imgAlt}: ${names[item.key]}`}
+                                            loading="lazy"
+                                        />
+                                    </div>
                                 ) : (
                                     <div
                                         className="w-full h-[320px] md:h-[500px] rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center"
@@ -110,6 +114,10 @@ function Project() {
                                     reversed ? "order-2 md:order-1" : ""
                                 }`}
                             >
+                                <span className="font-headline text-sm font-bold tracking-[0.2em] text-on-surface-variant block mb-3">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+
                                 <h3 className="text-3xl font-bold text-primary mb-4">
                                     {names[item.key]}
                                 </h3>
@@ -173,6 +181,7 @@ function Project() {
                             </div>
 
                         </div>
+                        </Reveal>
                     )
                 })}
 

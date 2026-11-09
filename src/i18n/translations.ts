@@ -3,6 +3,7 @@ export const translations = {
     hero: {
       title: "Desarrolladora Full Stack con enfoque en backend.",
       desc: "Soy Nazareth Sánchez. Diseño y construyo APIs y aplicaciones web escalables con .NET, React y tecnologías modernas, transformando problemas complejos en soluciones eficientes. Estudiante avanzada de Informática Empresarial en la UCR, abierta a nuevas oportunidades.",
+      available: "Disponible para nuevas oportunidades",
       btn1: "Ver Proyectos",
       btn2: "Ver CV",
       focus: "Enfoque",
@@ -98,6 +99,7 @@ export const translations = {
     hero: {
       title: "Full Stack developer with a backend focus.",
       desc: "I'm Nazareth Sánchez. I design and build scalable APIs and web applications with .NET, React and modern technologies, turning complex problems into efficient solutions. Advanced Business Informatics student at the University of Costa Rica, open to new opportunities.",
+      available: "Open to new opportunities",
       btn1: "View Projects",
       btn2: "View CV",
       focus: "Focus",
