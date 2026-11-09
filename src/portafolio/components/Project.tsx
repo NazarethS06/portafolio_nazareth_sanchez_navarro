@@ -6,12 +6,15 @@ interface ProjectItem {
     image?: string
     github?: string
     detail?: string
+    site?: string
     tags?: string[]
 }
 
 const items: ProjectItem[] = [
     {
         key: "bercorp",
+        image: "bercorp.jpg",
+        site: "https://ber-corp.com/tienda",
         tags: ["Laravel", "PHP", "MySQL", "React", "Tailwind"],
     },
     {
@@ -137,6 +140,17 @@ function Project() {
                                         >
                                             {t.projects.view}
                                         </Link>
+                                    )}
+
+                                    {item.site && (
+                                        <a
+                                            href={item.site}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90 transition"
+                                        >
+                                            {t.projects.visitSite}
+                                        </a>
                                     )}
 
                                     {item.github ? (
