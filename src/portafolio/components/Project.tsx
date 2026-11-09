@@ -2,13 +2,18 @@ import { useLanguage } from "../../context/LanguageContext"
 import { Link } from "react-router-dom"
 
 interface ProjectItem {
-    key: "zybus" | "app" | "web" | "super"
-    image: string
-    github: string
+    key: "bercorp" | "zybus" | "app" | "web" | "super"
+    image?: string
+    github?: string
     detail?: string
+    tags?: string[]
 }
 
 const items: ProjectItem[] = [
+    {
+        key: "bercorp",
+        tags: ["Laravel", "PHP", "MySQL", "React", "Tailwind"],
+    },
     {
         key: "zybus",
         image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
@@ -38,6 +43,7 @@ function Project() {
     const { t } = useLanguage()
 
     const names = {
+        bercorp: t.projects.bercorp,
         zybus: t.projects.zybus,
         app: t.projects.app,
         web: t.projects.web,
@@ -45,6 +51,7 @@ function Project() {
     }
 
     const descriptions = {
+        bercorp: t.projects.bercorpDesc,
         zybus: t.projects.zybusDesc,
         app: t.projects.appDesc,
         web: t.projects.webDesc,
@@ -75,12 +82,24 @@ function Project() {
                                     reversed ? "order-1 md:order-2" : ""
                                 }`}
                             >
-                                <img
-                                    className="w-full h-[320px] md:h-[500px] object-cover rounded-xl md:grayscale hover:grayscale-0 transition"
-                                    src={item.image}
-                                    alt={`${t.projects.imgAlt}: ${names[item.key]}`}
-                                    loading="lazy"
-                                />
+                                {item.image ? (
+                                    <img
+                                        className="w-full h-[320px] md:h-[500px] object-cover rounded-xl md:grayscale hover:grayscale-0 transition"
+                                        src={item.image}
+                                        alt={`${t.projects.imgAlt}: ${names[item.key]}`}
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <div
+                                        className="w-full h-[320px] md:h-[500px] rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center"
+                                        role="img"
+                                        aria-label={names[item.key]}
+                                    >
+                                        <span className="font-headline text-5xl md:text-7xl font-extrabold tracking-widest text-on-primary-container">
+                                            {names[item.key]}
+                                        </span>
+                                    </div>
+                                )}
                             </div>
 
                             <div
@@ -96,6 +115,19 @@ function Project() {
                                     {descriptions[item.key]}
                                 </p>
 
+                                {item.tags && (
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {item.tags.map((tag) => (
+                                            <span
+                                                key={tag}
+                                                className="px-3 py-1 bg-surface-container-high rounded-full text-sm"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+
                                 <div className="flex flex-wrap items-center gap-4">
 
                                     {item.detail && (
@@ -107,14 +139,21 @@ function Project() {
                                         </Link>
                                     )}
 
-                                    <a
-                                        href={item.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
-                                    >
-                                        {t.projects.github}
-                                    </a>
+                                    {item.github ? (
+                                        <a
+                                            href={item.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
+                                        >
+                                            {t.projects.github}
+                                        </a>
+                                    ) : (
+                                        <span className="inline-flex items-center gap-2 text-sm text-on-surface-variant">
+                                            <span className="material-symbols-outlined text-base">lock</span>
+                                            {t.projects.privateRepo}
+                                        </span>
+                                    )}
 
                                 </div>
                             </div>
