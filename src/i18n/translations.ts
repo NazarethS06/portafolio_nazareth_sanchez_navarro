@@ -1,10 +1,10 @@
 export const translations = {
   es: {
     hero: {
-      title: "Construyendo Soluciones Digitales que Impactan.",
-      desc: "Soy Nazareth Sánchez, desarrolladora Full Stack con un fuerte enfoque en backend, apasionada por construir aplicaciones web escalables y de alto rendimiento. Transformo problemas complejos en soluciones eficientes y reales utilizando .NET, React y tecnologías modernas.",
+      title: "Desarrolladora Full Stack con enfoque en backend.",
+      desc: "Soy Nazareth Sánchez. Diseño y construyo APIs y aplicaciones web escalables con .NET, React y tecnologías modernas, transformando problemas complejos en soluciones eficientes. Estudiante avanzada de Informática Empresarial en la UCR, abierta a nuevas oportunidades.",
       btn1: "Ver Proyectos",
-      btn2: "Ir a CV",
+      btn2: "Ver CV",
       focus: "Enfoque",
       phrase: "Código limpio, sistemas escalables e impacto real."
     },
@@ -12,7 +12,8 @@ export const translations = {
       home: "Inicio",
       about: "Sobre mí",
       projects: "Proyectos",
-      hire: "Contactame"
+      hire: "Contáctame",
+      menu: "Abrir menú"
     },
     skills: {
       title: "Habilidades",
@@ -30,6 +31,11 @@ export const translations = {
       app: "App de Órdenes",
       web: "Sistema Web de Órdenes",
       super: "SuperLaCentral",
+      zybusDesc: "Capa backend del sistema Zybus: API REST, lógica de negocio y persistencia de datos.",
+      appDesc: "Aplicación móvil para gestionar pedidos en tiempo real. Hecha con React Native y Firebase.",
+      webDesc: "Plataforma web para administrar pedidos con una interfaz moderna y eficiente.",
+      superDesc: "Proyecto backend: API REST, lógica de negocio y gestión de datos.",
+      imgAlt: "Vista previa del proyecto",
       view: "Ver Proyecto",
       github: "GitHub"
     },
@@ -37,6 +43,10 @@ export const translations = {
       title: "Curriculum Vitae",
       desc: "Estudiante avanzada en Informática Empresarial.",
       download: "Descargar CV",
+      present: "Actualidad",
+      edu1Title: "Informática Empresarial — Universidad de Costa Rica",
+      edu2Title: "Bachillerato — CTP La Suiza",
+      certLabel: "Certificaciones",
       edu1: "Formación en desarrollo de software, bases de datos, APIs REST y tecnologías web modernas.",
       edu2: "Formación académica secundaria con bases en tecnología.",
       cert: "Certificaciones en Inteligencia Artificial, Ciberseguridad y soporte técnico (CertiProf & Cisco)."
@@ -46,7 +56,8 @@ export const translations = {
       desc: "Estoy abierta a oportunidades y colaboraciones.",
       email: "Email",
       linkedin: "LinkedIn",
-      whatsapp: "WhatsApp"
+      whatsapp: "WhatsApp",
+      github: "GitHub"
     },
     footer: {
       rights: "Todos los derechos reservados."
@@ -81,10 +92,10 @@ export const translations = {
 
   en: {
     hero: {
-      title: "Building Digital Solutions That Matter.",
-      desc: "I’m Nazareth I'm Nazareth I'm Nazareth Sánchez, a Full Stack developer with a strong backend focus, passionate about building scalable, high-performance web applications. I turn complex problems into efficient, real-world solutions using .NET, React, and modern technologies., a Full Stack developer, mainly in Backend, focused on creating scalable web applications using .NET, React and modern technologies., a Full Stack Developer focused on scalable web apps using .NET, React and modern tech.",
+      title: "Full Stack developer with a backend focus.",
+      desc: "I'm Nazareth Sánchez. I design and build scalable APIs and web applications with .NET, React and modern technologies, turning complex problems into efficient solutions. Advanced Business Informatics student at the University of Costa Rica, open to new opportunities.",
       btn1: "View Projects",
-      btn2: "Go to CV",
+      btn2: "View CV",
       focus: "Focus",
       phrase: "Clean code, scalable systems and real impact."
     },
@@ -92,7 +103,8 @@ export const translations = {
       home: "Home",
       about: "About",
       projects: "Projects",
-      hire: "Contact me"
+      hire: "Contact me",
+      menu: "Open menu"
     },
     skills: {
       title: "Skills",
@@ -110,6 +122,11 @@ export const translations = {
       app: "Orders Mobile App",
       web: "Orders Web System",
       super: "SuperLaCentral",
+      zybusDesc: "Backend layer of the Zybus system: REST API, business logic and data persistence.",
+      appDesc: "Mobile app to manage orders in real time. Built with React Native and Firebase.",
+      webDesc: "Web platform to manage orders with a modern and efficient interface.",
+      superDesc: "Backend project: REST API, business logic and data management.",
+      imgAlt: "Project preview",
       view: "View Project",
       github: "GitHub"
     },
@@ -117,6 +134,10 @@ export const translations = {
       title: "Resume",
       desc: "Advanced Business Informatics student.",
       download: "Download CV",
+      present: "Present",
+      edu1Title: "Business Informatics — University of Costa Rica",
+      edu2Title: "High School Diploma — CTP La Suiza",
+      certLabel: "Certifications",
       edu1: "Education in software development, databases, REST APIs and modern web technologies.",
       edu2: "High school education with a foundation in technology.",
       cert: "Certifications in Artificial Intelligence, Cybersecurity and Technical Support (CertiProf & Cisco)."
@@ -126,7 +147,8 @@ export const translations = {
       desc: "I’m open to opportunities and collaborations.",
       email: "Email",
       linkedin: "LinkedIn",
-      whatsapp: "WhatsApp"
+      whatsapp: "WhatsApp",
+      github: "GitHub"
     },
     footer: {
       rights: "All rights reserved."

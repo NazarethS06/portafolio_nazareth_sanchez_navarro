@@ -1,9 +1,55 @@
 import { useLanguage } from "../../context/LanguageContext"
 import { Link } from "react-router-dom"
 
+interface ProjectItem {
+    key: "zybus" | "app" | "web" | "super"
+    image: string
+    github: string
+    detail?: string
+}
+
+const items: ProjectItem[] = [
+    {
+        key: "zybus",
+        image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+        github: "https://github.com/FallasDev/Zybus-Backend",
+    },
+    {
+        key: "app",
+        image: "app3.png",
+        github: "https://github.com/NazarethS06/appOrdenaYa",
+        detail: "/app",
+    },
+    {
+        key: "web",
+        image: "imagesWeb/web1.jpeg",
+        github: "https://github.com/NazarethS06/webOrdenaYa",
+        detail: "/web",
+    },
+    {
+        key: "super",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        github: "https://github.com/NazarethS06/superBackend",
+    },
+]
+
 function Project() {
 
     const { t } = useLanguage()
+
+    const names = {
+        zybus: t.projects.zybus,
+        app: t.projects.app,
+        web: t.projects.web,
+        super: t.projects.super,
+    }
+
+    const descriptions = {
+        zybus: t.projects.zybusDesc,
+        app: t.projects.appDesc,
+        web: t.projects.webDesc,
+        super: t.projects.superDesc,
+    }
 
     return (
         <section
@@ -18,124 +64,64 @@ function Project() {
 
             <div className="space-y-32">
 
-                {/* ZYBUS */}
-                <div className="grid grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 md:col-span-7">
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition"
-                            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
-                        />
-                    </div>
+                {items.map((item, index) => {
+                    const reversed = index % 2 === 1
 
-                    <div className="col-span-12 md:col-span-5">
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                            {t.projects.zybus}
-                        </h3>
+                    return (
+                        <div key={item.key} className="grid grid-cols-12 gap-8 items-center">
 
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://github.com/FallasDev/Zybus-Backend"
-                                target="_blank"
-                                className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
+                            <div
+                                className={`col-span-12 md:col-span-7 ${
+                                    reversed ? "order-1 md:order-2" : ""
+                                }`}
                             >
-                                {t.projects.github}
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                <img
+                                    className="w-full h-[320px] md:h-[500px] object-cover rounded-xl md:grayscale hover:grayscale-0 transition"
+                                    src={item.image}
+                                    alt={`${t.projects.imgAlt}: ${names[item.key]}`}
+                                    loading="lazy"
+                                />
+                            </div>
 
-                {/* APP MOVIL */}
-                <div className="grid grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 md:col-span-5 order-2 md:order-1">
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                            {t.projects.app}
-                        </h3>
-
-                        <Link
-                            to="/app"
-                            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90 transition"
-                        >
-                            {t.projects.view}
-                        </Link>
-
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://github.com/NazarethS06/appOrdenaYa"
-                                target="_blank"
-                                className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
+                            <div
+                                className={`col-span-12 md:col-span-5 ${
+                                    reversed ? "order-2 md:order-1" : ""
+                                }`}
                             >
-                                {t.projects.github}
-                            </a>
+                                <h3 className="text-3xl font-bold text-primary mb-4">
+                                    {names[item.key]}
+                                </h3>
+
+                                <p className="text-on-surface-variant mb-6 leading-relaxed">
+                                    {descriptions[item.key]}
+                                </p>
+
+                                <div className="flex flex-wrap items-center gap-4">
+
+                                    {item.detail && (
+                                        <Link
+                                            to={item.detail}
+                                            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90 transition"
+                                        >
+                                            {t.projects.view}
+                                        </Link>
+                                    )}
+
+                                    <a
+                                        href={item.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
+                                    >
+                                        {t.projects.github}
+                                    </a>
+
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-
-                    <div className="col-span-12 md:col-span-7 order-1 md:order-2">
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition"
-                            src="app3.png"
-                        />
-                    </div>
-                </div>
-
-                {/* WEB */}
-                <div className="grid grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 md:col-span-7">
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition"
-                            src="imagesWeb/web1.jpeg"
-                        />
-                    </div>
-
-                    <div className="col-span-12 md:col-span-5">
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                            {t.projects.web}
-                        </h3>
-
-
-                        <Link
-                            to="/web"
-                            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90 transition"
-                        >
-                            {t.projects.view}
-                        </Link>
-
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://github.com/NazarethS06/webOrdenaYa"
-                                target="_blank"
-                                className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
-                            >
-                                {t.projects.github}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                {/* SUPER */}
-                <div className="grid grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 md:col-span-5 order-2 md:order-1">
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                            {t.projects.super}
-                        </h3>
-
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://github.com/NazarethS06/superBackend"
-                                target="_blank"
-                                className="px-4 py-2 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition"
-                            >
-                                {t.projects.github}
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="col-span-12 md:col-span-7 order-1 md:order-2">
-                        <img
-                            className="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition"
-                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-                        />
-                    </div>
-                </div>
+                    )
+                })}
 
             </div>
         </section>

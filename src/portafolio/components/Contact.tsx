@@ -37,6 +37,16 @@ const Contact = () => {
                     </a>
 
                     <a
+                        href="https://github.com/NazarethS06"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 border border-primary text-primary px-8 py-3 rounded-md font-bold hover:bg-primary hover:text-white transition"
+                    >
+                        <span className="material-symbols-outlined">code</span>
+                        {t.contact.github}
+                    </a>
+
+                    <a
                         href="https://wa.me/50686171318"
                         target="_blank"
                         rel="noopener noreferrer"

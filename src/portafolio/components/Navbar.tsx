@@ -20,7 +20,7 @@ function Navbar() {
 
                 {/* LOGO */}
                 <div className="text-2xl font-black tracking-tighter text-[#012d1d] dark:text-emerald-500 font-headline">
-                    Portafolio
+                    Nazareth Sánchez
                 </div>
 
                 {/* LINKS */}
@@ -98,7 +98,7 @@ function Navbar() {
                         className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant text-primary"
                         onClick={() => setMenuOpen((value) => !value)}
                         aria-expanded={menuOpen}
-                        aria-label="Abrir menú"
+                        aria-label={t.navbar.menu}
                     >
                         <span className="material-symbols-outlined">
                             {menuOpen ? "close" : "menu"}

@@ -22,7 +22,7 @@ function HeroSection() {
                 {/* TEXTO */}
                 <div className="col-span-12 md:col-span-8">
 
-                    <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-primary mb-8">
+                    <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-primary mb-8">
                         {t.hero.title}
                     </h1>
 
@@ -34,14 +34,14 @@ function HeroSection() {
 
                         <button
                             onClick={() => scrollTo("projects")}
-                            className="bg-primary text-white px-10 py-4 rounded-md font-bold flex items-center gap-3"
+                            className="bg-primary text-white px-10 py-4 rounded-md font-bold flex items-center gap-3 hover:opacity-90 transition"
                         >
                             {t.hero.btn1}
                         </button>
 
                         <button
                             onClick={() => scrollTo("resume")}
-                            className="border border-outline-variant/15 text-primary px-10 py-4 rounded-md font-bold"
+                            className="border border-primary text-primary px-10 py-4 rounded-md font-bold hover:bg-primary hover:text-white transition"
                         >
                             {t.hero.btn2}
                         </button>
@@ -55,6 +55,8 @@ function HeroSection() {
                         <img
                             className="w-full h-full object-cover"
                             src={nazaPhoto}
+                            alt="Nazareth Sánchez"
+                            fetchPriority="high"
                         />
                     </div>
 

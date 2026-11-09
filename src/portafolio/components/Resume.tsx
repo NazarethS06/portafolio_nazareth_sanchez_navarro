@@ -24,6 +24,7 @@ function Resume() {
                     <a
                         href="/CV_Nazareth_Sanchez_Navarro_ES.pdf"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-primary text-white px-8 py-3 rounded-md font-bold hover:opacity-90"
                     >
                         <span className="material-symbols-outlined">description</span>
@@ -38,11 +39,11 @@ function Resume() {
                         <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
 
                         <span className="text-xs uppercase tracking-widest text-on-surface-variant block mb-2">
-                            2022 — Actualidad
+                            2022 — {t.resume.present}
                         </span>
 
                         <h4 className="text-xl font-bold text-primary">
-                            Informática Empresarial — Universidad de Costa Rica
+                            {t.resume.edu1Title}
                         </h4>
 
                         <p className="text-on-surface-variant mt-2">
@@ -58,7 +59,7 @@ function Resume() {
                         </span>
 
                         <h4 className="text-xl font-bold text-primary">
-                            Bachillerato — CTP La Suiza
+                            {t.resume.edu2Title}
                         </h4>
 
                         <p className="text-on-surface-variant mt-2">
@@ -70,7 +71,7 @@ function Resume() {
                         <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-fixed-dim"></div>
 
                         <span className="text-xs uppercase tracking-widest text-on-surface-variant block mb-2">
-                            Certificaciones
+                            {t.resume.certLabel}
                         </span>
 
                         <h4 className="text-xl font-bold text-primary">
